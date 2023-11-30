@@ -31,8 +31,8 @@ jobs:
           push: true
           tags: ${{ vars.REGISTRY }}/${{ vars.YA_REGISTRY_ID }}/bingo:latest
           build-args: |
-            EMAIL=${EMAIL}
-            PG_HOST=${PG_HOST}
-            DB_PASSWORD=${DB_PASSWORD}
-            LOGDIR=${LOGDIR}
-            PORT_INTERNAL=${PORT_INTERNAL}
+            EMAIL=${{ secrets.EMAIL }}
+            PG_HOST=${{ vars.PG_HOST }}
+            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            LOGDIR=${{ vars.LOGDIR }}
+            PORT_INTERNAL=${{ vars.PORT_INTERNAL }}
