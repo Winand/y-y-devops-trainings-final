@@ -1,0 +1,10 @@
+student_email: ${EMAIL}
+postgres_cluster:
+  hosts:
+  - address: ${PG_HOST}
+    port: 5432
+  user: bingo
+  password: ${DB_PASSWORD}
+  db_name: bingo
+  ssl_mode: disable
+  use_closest_node: false
