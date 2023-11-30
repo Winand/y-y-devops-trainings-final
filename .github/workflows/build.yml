@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo ">>${EMAIL}|${PG_HOST}|${DB_PASSWORD}|${LOGDIR}|${PORT_INTERNAL}<<"
       - name: Checkout repository
         uses: actions/checkout@v4
 

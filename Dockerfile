@@ -24,4 +24,4 @@ RUN useradd app && \
 USER app
 ENTRYPOINT [ "/opt/bingo/bingo" ]
 # https://stackoverflow.com/a/22150099
-EXPOSE ${PORT_INTERNAL}
+EXPOSE ${PORT_INTERNAL?}
