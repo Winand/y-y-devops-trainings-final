@@ -1,1 +1,7 @@
 ﻿docker-compose.yml
+terraform/.terraform
+terraform/authorized_key.json
+terraform/terraform.tfstate.backup
+*.tfstate
+terraform/ssh_key.pub
+terraform/yc.auto.tfvars

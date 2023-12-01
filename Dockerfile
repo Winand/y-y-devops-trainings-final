@@ -46,5 +46,6 @@ EXPOSE ${PORT_INTERNAL?}
 # https://github.com/GoogleContainerTools/distroless/issues/183#issuecomment-571723446
 # https://community.zenduty.com/t/how-to-run-a-healthcheck-using-wget-or-curl-on-a-grafana-grafana-master-image-in-a-container/659/10
 # Variable expansion requires a shell https://stackoverflow.com/a/76100442
+# https://stackoverflow.com/questions/47088261/restarting-an-unhealthy-docker-container-based-on-healthcheck
 HEALTHCHECK --interval=40s \
     CMD wget -qt1 -O- http://localhost:${PORT_INTERNAL?}/ping || kill 1

@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  catgpt:
+    container_name: bingo
+    image: "cr.yandex/${registry_id}/bingo:latest"
+    restart: always
+    network_mode: "host"
+    command: run_server
+  # unifiedagent:  # для сбора метрик
+  #   container_name: unifiedagent
+  #   image: "cr.yandex/yc/unified-agent"
+  #   environment:
+  #     FOLDER_ID: "${folder_id}"
+  #   restart: always
+  #   network_mode: "host"
+  #   volumes:
+  #     # конфиг с описанием, откуда забирать метрики
+  #     - /ua:/etc/yandex/unified_agent/conf.d

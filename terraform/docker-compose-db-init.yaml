@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  catgpt:
+    container_name: bingo
+    image: "cr.yandex/${registry_id}/bingo:latest"
+    network_mode: "host"
+    command: prepare_db
