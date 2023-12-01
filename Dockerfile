@@ -2,6 +2,7 @@ FROM debian:10-slim as builder
 
 ARG EMAIL
 ARG PG_HOST
+ARG PG_PORT
 ARG DB_PASSWORD
 ARG LOGDIR
 
@@ -9,6 +10,7 @@ ADD config.yaml /opt/bingo/
 RUN sed /opt/bingo/config.yaml -i \
         -e "s/\${EMAIL}/${EMAIL?}/g" \
         -e "s/\${PG_HOST}/${PG_HOST?}/g" \
+        -e "s/\${PG_PORT}/${PG_PORT:-5432}/g" \
         -e "s/\${DB_PASSWORD}/${DB_PASSWORD?}/g" && \
     mkdir -p /opt/bongo/logs/${LOGDIR?} && \
     ln -s /dev/null /opt/bongo/logs/${LOGDIR?}/main.log

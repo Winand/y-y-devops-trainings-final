@@ -2,7 +2,7 @@ student_email: ${EMAIL}
 postgres_cluster:
   hosts:
   - address: ${PG_HOST}
-    port: 5432
+    port: ${PG_PORT}
   user: bingo
   password: ${DB_PASSWORD}
   db_name: bingo

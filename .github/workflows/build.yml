@@ -33,6 +33,7 @@ jobs:
           build-args: |
             EMAIL=${{ secrets.EMAIL }}
             PG_HOST=${{ vars.PG_HOST }}
+            PG_PORT=${{ vars.PG_PORT }}
             DB_PASSWORD=${{ secrets.DB_PASSWORD }}
             LOGDIR=${{ vars.LOGDIR }}
             PORT_INTERNAL=${{ vars.PORT_INTERNAL }}
